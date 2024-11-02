@@ -1,3 +1,11 @@
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+    title: 'Security-Technologies',
+    description: 'Powered By Techtack-Technologies',
+}
+
+
 export default function Home() {
     return (
         <div className="relative w-full h-screen overflow-hidden">
