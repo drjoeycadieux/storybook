@@ -13,17 +13,15 @@ export const metadata: Metadata = {
 
 export default function Home() {
     return (
-        <div>
+        <div className="relative w-full h-screen overflow-hidden">
             <Head>
                 <title>Security-Technologies - Powered By Techtack-Technologies</title>
                 <meta name="description" content="This is a sample Next.js application." />
             </Head>
-            <div className="relative w-full h-screen overflow-hidden">
-                <div className="bg-yellow-500 text-black text-center py-2 z-20 absolute top-0 left-0 w-full">
-                    <p className="font-medium">
-                        Important Update: Our website has a new look! Check it out!
-                    </p>
-                </div>
+            <div className="bg-yellow-500 text-black text-center py-2 z-20 absolute top-0 left-0 w-full">
+                <p className="font-medium">
+                    Important Update: Our website has a new look! Check it out!
+                </p>
             </div>
 
 
