@@ -6,7 +6,7 @@ type SpotifyDataType = {
     albums?: any[];
 };
 
-const SpotifyData = () => {
+const home = () => {
     const [data, setData] = useState<SpotifyDataType | null>(null);
     const [loading, setLoading] = useState<boolean>(true);
     const [error, setError] = useState<string | null>(null);
@@ -46,4 +46,4 @@ const SpotifyData = () => {
     );
 };
 
-export default SpotifyData;
+export default home;
