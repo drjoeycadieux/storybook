@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Head from 'next/head';
+import Link from 'next/link';
 
 
 
@@ -43,9 +44,11 @@ export default function Home() {
                     Security-Technologies
                 </h1>
 
-                <button className="mt-4 px-6 py-3 text-lg font-semibold text-white bg-blue-600 rounded-lg shadow-lg transition duration-300 hover:bg-blue-700 hover:scale-105 focus:outline-none">
-                    See Docs
-                </button>
+                <Link href="/home" passHref>
+                    <button className="bg-blue-500 text-white font-semibold py-2 px-4 rounded hover:bg-blue-600 transition duration-200">
+                        See Player
+                    </button>
+                </Link>
             </div>
         </div>
     );
