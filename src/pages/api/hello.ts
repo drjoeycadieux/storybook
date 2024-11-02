@@ -1,10 +1,21 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
-type Data = {
+interface Location {
+  city: string;
+  state: string;
+}
+
+interface Data {
   name: string;
   age: number;
   hobbies: string[];
-};
+  email: string;
+  occupation: string;
+  location: Location;
+  skills: string[];
+  isActive: boolean;
+}
+
 
 export default function handler(
   req: NextApiRequest,
@@ -15,8 +26,18 @@ export default function handler(
   const responseData: Data = {
     name: "John Doe",
     age: 30,
-    hobbies: ["reading", "traveling", "coding"]
+    hobbies: ["reading", "traveling", "coding"],
+    email: "johndoe@example.com",
+    occupation: "Software Developer",
+    location: {
+      city: "San Francisco",
+      state: "CA",
+    },
+    skills: ["JavaScript", "TypeScript", "React"],
+    isActive: true,
   };
+
+
 
   res.status(200).json(responseData);
 }

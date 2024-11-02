@@ -4,7 +4,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     try {
         // Simulating fetching data from the Spotify API
-        const response = await fetch('https://api.spotify.com/v1/some-endpoint', {
+        const response = await fetch('https://api.spotify.com/v1/me', {
             headers: {
                 Authorization: `Bearer ${process.env.SPOTIFY_API_TOKEN}`,
             },
