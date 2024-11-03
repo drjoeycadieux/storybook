@@ -24,16 +24,16 @@ export default function handler(
 
 
   const responseData: Data = {
-    name: "John Doe",
-    age: 30,
+    name: "Joey Cadieux",
+    age: 26,
     hobbies: ["reading", "traveling", "coding"],
-    email: "johndoe@example.com",
-    occupation: "Software Developer",
+    email: "joeycadieux161@gmail.com",
+    occupation: "Junior Software Engineer",
     location: {
-      city: "San Francisco",
+      city: "Montreal, QC",
       state: "CA",
     },
-    skills: ["JavaScript", "TypeScript", "React"],
+    skills: ["JavaScript", "TypeScript", "React", "Vue"],
     isActive: true,
   };
 

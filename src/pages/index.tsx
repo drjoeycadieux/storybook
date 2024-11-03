@@ -44,9 +44,9 @@ export default function Home() {
                     Security-Technologies
                 </h1>
 
-                <Link href="/home" passHref>
+                <Link href="/about" passHref>
                     <button className="bg-blue-500 text-white font-semibold py-2 px-4 rounded hover:bg-blue-600 transition duration-200">
-                        See Player
+                        See Information
                     </button>
                 </Link>
             </div>
