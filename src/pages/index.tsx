@@ -40,7 +40,7 @@ export default function Home() {
 
 
             <div className="relative flex flex-col items-center justify-center h-full z-10">
-                <h1 className="text-6xl font-bold text-white transition-transform duration-300 hover:scale-110 hover:text-orange-500">
+                <h1 className="text-6xl font-bold text-white transition-transform duration-300 hover:scale-110 hover:text-white">
                     Security-Technologies
                 </h1>
 
