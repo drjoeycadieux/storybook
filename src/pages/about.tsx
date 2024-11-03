@@ -1,4 +1,7 @@
+import Head from 'next/head';
 import { useEffect, useState } from 'react';
+
+
 
 const Home = () => {
     const [data, setData] = useState<any>(null);
@@ -27,6 +30,10 @@ const Home = () => {
 
     return (
         <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4">
+            <Head>
+                <title>Security-Technologies - Powered By Techtack-Technologies</title>
+                <meta name="description" content="This is a sample Next.js application." />
+            </Head>
             <h1 className="text-4xl font-bold mb-4">About Me,</h1>
             {error && <p className="text-red-500">{error}</p>}
             {data ? (
