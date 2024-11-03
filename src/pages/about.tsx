@@ -1,33 +1,50 @@
-import Head from 'next/head';
-import { GetServerSideProps } from 'next';
+import { useEffect, useState } from 'react';
 
-interface HomeProps {
-    message: string;
-}
+const Home = () => {
+    const [data, setData] = useState<any>(null);
+    const [error, setError] = useState<string | null>(null);
 
-export const getServerSideProps: GetServerSideProps<HomeProps> = async () => {
-    const res = await fetch('https://security-technologies.info/api/hello'); // Change URL in production
-    const data = await res.json();
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const res = await fetch('/api/hello');
+                if (!res.ok) {
+                    throw new Error(`HTTP error! status: ${res.status}`);
+                }
+                const json = await res.json();
+                setData(json);
+            } catch (err) {
+                if (err instanceof Error) {
+                    setError(err.message);
+                } else {
+                    setError('An unknown error occurred');
+                }
+            }
+        };
 
-    return {
-        props: {
-            message: data.message,
-        },
-    };
+        fetchData();
+    }, []);
+
+    return (
+        <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4">
+            <h1 className="text-4xl font-bold mb-4">About Me,</h1>
+            {error && <p className="text-red-500">{error}</p>}
+            {data ? (
+                <div className="bg-white p-6 rounded shadow-md w-full max-w-md">
+                    <p><strong>Name:</strong> {data.name}</p>
+                    <p><strong>Age:</strong> {data.age}</p>
+                    <p><strong>Email:</strong> {data.email}</p>
+                    <p><strong>Occupation:</strong> {data.occupation}</p>
+                    <p><strong>Location:</strong> {data.location.city}, {data.location.state}</p>
+                    <p><strong>Hobbies:</strong> {data.hobbies.join(', ')}</p>
+                    <p><strong>Skills:</strong> {data.skills.join(', ')}</p>
+                    <p><strong>Active:</strong> {data.isActive ? 'Yes' : 'No'}</p>
+                </div>
+            ) : (
+                <p className="text-gray-500">Loading...</p>
+            )}
+        </div>
+    );
 };
 
-export default function About() {
-    return (
-        <div>
-            <div className="bg-gray-800 md:p-10">
-                <Head>
-                    <title>Security-Technologies - Powered By Techtack-Technologies</title>
-                </Head>
-                <p className="text-white font-sans text-center text-5xl">
-                    About
-                </p>
-                {/* <p>{ }</p> code goes here  */}
-            </div>
-        </div>
-    )
-}
+export default Home;
