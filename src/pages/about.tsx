@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import { useEffect, useState } from 'react';
+import Link from 'next/link'
 
 
 
@@ -34,6 +35,7 @@ const Home = () => {
                 <title>Security-Technologies - Powered By Techtack-Technologies</title>
                 <meta name="description" content="This is a sample Next.js application." />
             </Head>
+            <Link className='text-gray-800 font-bold underline' href="/">Return Home</Link>
             <h1 className="text-4xl font-bold mb-4">About Me,</h1>
             {error && <p className="text-red-500">{error}</p>}
             {data ? (
