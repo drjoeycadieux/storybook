@@ -10,6 +10,7 @@ interface Data {
   age: number;
   hobbies: string[];
   email: string;
+  work_email: string;
   occupation: string;
   location: Location;
   skills: string[];
@@ -28,6 +29,7 @@ export default function handler(
     age: 26,
     hobbies: ["reading", "traveling", "coding"],
     email: "joeycadieux161@gmail.com",
+    work_email: "joey.cadieux@techtack-technologies.info",
     occupation: "Junior Software Engineer",
     location: {
       city: "Montreal, QC",

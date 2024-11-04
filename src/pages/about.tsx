@@ -43,6 +43,7 @@ const Home = () => {
                     <p><strong>Name:</strong> {data.name}</p>
                     <p><strong>Age:</strong> {data.age}</p>
                     <p><strong>Email:</strong> {data.email}</p>
+                    <p><strong>Work Email:</strong> {data.work_email}</p>
                     <p><strong>Occupation:</strong> {data.occupation}</p>
                     <p><strong>Location:</strong> {data.location.city}, {data.location.state}</p>
                     <p><strong>Hobbies:</strong> {data.hobbies.join(', ')}</p>
