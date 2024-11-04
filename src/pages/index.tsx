@@ -20,7 +20,6 @@ export default function Home() {
         <div className="relative w-full h-screen overflow-hidden">
             <Head>
                 <title>Security-Technologies - Powered By Techtack-Technologies</title>
-                <meta name="description" content="This is a sample Next.js application." />
             </Head>
             <Banner />
 
