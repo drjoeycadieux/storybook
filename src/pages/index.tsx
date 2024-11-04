@@ -10,6 +10,9 @@ export const metadata: Metadata = {
 }
 
 
+// components
+import Banner from '@/components/Banner';
+
 
 
 export default function Home() {
@@ -19,12 +22,7 @@ export default function Home() {
                 <title>Security-Technologies - Powered By Techtack-Technologies</title>
                 <meta name="description" content="This is a sample Next.js application." />
             </Head>
-            <div className="bg-yellow-500 text-black text-center py-2 z-20 absolute top-0 left-0 w-full">
-                <p className="font-medium">
-                    Important Update: 🌟 Our website has a new look! Check it out! 👀✨
-                </p>
-            </div>
-
+            <Banner />
 
             <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center z-0">
                 <video
