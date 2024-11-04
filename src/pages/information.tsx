@@ -3,7 +3,6 @@ import Head from 'next/head';
 
 
 import Banner from '@/components/Banner';
-import Chat from '@/components/Chat';
 
 
 const InformationPage = () => {
@@ -28,7 +27,6 @@ const InformationPage = () => {
                          <h2 className="text-xl font-bold text-blue-600 mb-2">Feature 3</h2>
                          <p className="text-lg text-gray-600">Description of feature 3.</p>
                     </div>
-                    <Chat />
                </div>
           </div>
      );
