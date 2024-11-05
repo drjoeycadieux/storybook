@@ -11,13 +11,20 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSuccess }) => {
     const [message, setMessage] = useState('');
     const [submitting, setSubmitting] = useState(false);
 
+    /**
+     * Handles form submission, sending the form data to the Supabase 'contact' table.
+     * If the submission is successful, calls the onSuccess callback.
+     * If there is an error, logs the error to the console.
+     * Sets submitting to true before making the request and sets it back to false when the request is resolved.
+     * @param {React.FormEvent<HTMLFormElement>} event
+     */
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         setSubmitting(true);
 
         try {
             const { data, error } = await supabase
-                .from('contacts')
+                .from('contact')
                 .insert({ name, email, message });
 
             if (error) {
