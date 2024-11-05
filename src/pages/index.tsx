@@ -15,6 +15,17 @@ import Banner from '@/components/Banner';
 
 
 
+/**
+ * Renders the home page component with a full-screen video background and a banner.
+ * 
+ * The component includes:
+ * - A title set in the document head for SEO purposes.
+ * - A banner component for displaying a header or intro content.
+ * - A video background that plays automatically in a loop and is muted.
+ * - A main content area with a heading and a button linking to the "About" page.
+ * 
+ * The layout is styled using Tailwind CSS classes for responsive design and animations.
+ */
 export default function Home() {
     return (
         <div className="relative w-full h-screen overflow-hidden">

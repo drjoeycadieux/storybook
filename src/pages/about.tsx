@@ -4,6 +4,21 @@ import Link from 'next/link'
 
 
 
+/**
+ * Home component that fetches and displays user data from an API.
+ *
+ * This component utilizes React hooks to manage state and side effects.
+ * It fetches data from the '/api/hello' endpoint and displays user
+ * information such as name, age, email, work email, occupation, location,
+ * hobbies, skills, and activity status. In case of an error during the
+ * fetch, an error message is displayed. While the data is being loaded,
+ * a loading message is shown.
+ *
+ * The component is styled using Tailwind CSS and includes a link to
+ * return to the home page.
+ *
+ * @returns JSX.Element representing the Home component.
+ */
 const Home = () => {
     const [data, setData] = useState<any>(null);
     const [error, setError] = useState<string | null>(null);
