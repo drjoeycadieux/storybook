@@ -9,6 +9,12 @@ const data = [
     { name: 'Page E', uv: 1890, pv: 4800, amt: 2181 },
 ];
 
+/**
+ * A simple line chart example.
+ *
+ * This component renders a line chart with two lines using the Recharts library.
+ * The chart is responsive and takes up the full height of the parent container.
+ */
 const LineChartExample = () => {
     return (
         <div className="flex flex-coljustify-center items-center md:h-screen">

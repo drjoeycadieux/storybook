@@ -5,6 +5,18 @@ import Head from 'next/head';
 import Banner from '@/components/Banner';
 
 
+/**
+ * Renders the Information Page component.
+ *
+ * This component displays a title and description about the Information Page
+ * using a combination of Next.js, TypeScript, and Tailwind CSS. It includes a
+ * `Banner` component and showcases three features with their descriptions.
+ *
+ * The layout is responsive and adjusts based on screen size, utilizing Tailwind
+ * CSS utility classes for styling.
+ *
+ * @returns JSX.Element representing the Information Page
+ */
 const InformationPage = () => {
      return (
           <div className="container mx-auto p-4 pt-6 md:p-9 lg:p-12">

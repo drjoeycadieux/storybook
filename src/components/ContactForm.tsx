@@ -5,6 +5,15 @@ interface ContactFormProps {
     onSubmit: (data: { name: string; email: string; message: string }) => void;
 }
 
+/**
+ * A form to send a message to the site owner.
+ *
+ * @typedef {Object} ContactFormProps
+ * @property {function({ name: string, email: string, message: string })} onSubmit - Called when the form is submitted.
+ *
+ * @param {ContactFormProps} props
+ * @returns {ReactElement}
+ */
 const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
