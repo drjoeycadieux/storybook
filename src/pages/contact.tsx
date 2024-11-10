@@ -1,6 +1,14 @@
-// src/pages/contact.tsx
 import ContactForm from '@/components/ContactFormField';
 
+/**
+ * Renders the Contact Page component.
+ *
+ * This component displays a title and includes a ContactForm component.
+ * When the form is successfully submitted, it logs a success message
+ * to the console.
+ *
+ * @returns JSX.Element representing the Contact Page
+ */
 const ContactPage = () => {
     return (
         <div>
