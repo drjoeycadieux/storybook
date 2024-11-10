@@ -1,5 +1,3 @@
-
-
 /**
  * Displays a banner at the top of the page with an important update message.
  *
